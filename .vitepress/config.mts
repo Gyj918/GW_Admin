@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/gw_admin/',
   title: "GW_Admin",
   // titleTemplate: ':title - Custom Suffix',
   description: "GW",
