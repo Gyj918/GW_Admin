@@ -2,12 +2,12 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/gw_admin/',
+  head: [['link', { rel: 'icon', href: '/gw.ico' }]],
+  // base: '/gw_admin/',
   title: "GW_Admin",
   // titleTemplate: ':title - Custom Suffix',
   description: "GW",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: '/gw.png',
     // siteTitle: false,
     // 搜索
@@ -15,46 +15,67 @@ export default defineConfig({
       provider: 'local'
     },
     // 广告
-    carbonAds: {
-      code: 'your-carbon-code',
-      placement: 'your-carbon-placement'
-    },
+    // carbonAds: {
+    //   code: 'your-carbon-code',
+    //   placement: 'your-carbon-placement'
+    // },
     nav: [
       { text: '首页', link: '/' },
-      { text: '产品中心', link: '/markdown-examples'},
-      { text: '案例', link: 'https://blog.csdn.net/m0_46833693/article/details/140517776' },
-      {
-        text: '加入我们',
-        items: [
-          { text: '人才招聘', link: 'https://blog.csdn.net/m0_46833693/article/details/140517776',target: '_self',rel: 'sponsored' },
-          { text: '联系我们', link: '/markdown-examples' }
-        ]
-      },
+      { text: '前端视野', link: '/front-end' },
+      { text: '工作内容', link: '/work' },
+      { text: '博客', link: 'https://blog.csdn.net/m0_46833693' },
+      // {
+      //   text: '加入我们',
+      //   items: [
+      //     { text: '人才招聘', link: 'https://blog.csdn.net/m0_46833693/article/details/140517776', target: '_self', rel: 'sponsored' },
+      //     { text: '联系我们', link: '/markdown-examples' }
+      //   ]
+      // },
     ],
-
-    sidebar: [
-      {
-        text: 'Vue',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'WebSocket全局封装', link: '/component' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ],
-        collapsed: false
-      },
-      {
-        text: 'React',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ],
-        collapsed: true
-      }
-    ],
+    sidebar: {
+      '/front-end/': [
+        {
+          text: '前端',
+          items: [
+            { text: '必备技能', link: '/front-end/' },
+            { text: '发展方向', link: '/front-end/life' },
+            { text: '作者介绍', link: '/front-end/user' },
+            {
+              text: '技术栈',
+              items: [
+                { text: 'React', link: '...' },
+                { text: 'Vue.js', link: '...' },
+                { text: 'Angular', link: '...' },
+                { text: 'jQuery', link: '...' },
+                { text: 'Bootstrap', link: '...' },
+                { text: 'Webpack', link: '...' },
+                { text: 'Vite', link: '...' },
+                { text: 'Zustand', link: '...' }
+              ]
+            },
+          ]
+        }
+      ],
+      '/work/': [
+        {
+          text: '工作内容',
+          items: [
+            { text: '现场工作', link: '/work/' },
+            { text: '生活',
+              items:[
+                { text: '我的一天', link: '/work/scene' },
+                { text: '刘卓的一天', link: '/work/lz' },
+                { text: '陈财的一天', link: '/work/cc' },
+              ]
+             },
+          ]
+        }
+      ]
+    },
     // aside: 'left',
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/Gyj918' },
       // 可以通过将 SVG 作为字符串传递来添加自定义图标
       {
         icon: {
@@ -67,14 +88,14 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Released under the MIT License.',
+      message: '本项目由 GYJ 开发，王倩蓉维护',
       copyright: 'Copyright © 2024-present GYJ'
     },
 
-    editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-      text: 'Edit this page on GitHub'
-    },
+    // editLink: {
+    //   pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+    //   text: 'Edit this page on GitHub'
+    // },
     // 自定义出现在上一页和下一页链接上方的文本
     docFooter: {
       prev: '上一篇',
