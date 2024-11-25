@@ -6,5 +6,9 @@
     "docs:dev": "vitepress dev --open",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
+  },
+  "engines": {
+    "node": ">=18.16.0",
+    "npm": ">=8.0.0"
   }
 }
