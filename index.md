@@ -42,7 +42,7 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 const members = [
   {
-    avatar: 'https://img1.baidu.com/it/u=221734957,3053911785&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
+    avatar: 'https://pics7.baidu.com/feed/91ef76c6a7efce1ba972976ee9e55ad7b58f6572.jpeg?token=215d21601cfd483550e172ed9909c2d3',
     name: '刘卓',
     title: '电气工程师',
     links: [
@@ -69,7 +69,7 @@ const members = [
     ]
   },
   {
-    avatar: 'https://iknow-pic.cdn.bcebos.com/a71ea8d3fd1f4134d3166ee0371f95cad1c85e0e',
+    avatar: 'https://bpic.51yuansu.com/pic3/cover/00/80/05/58c79a361a861_610.jpg',
     name: '陈财',
     title: '消防工程师',
     links: [
