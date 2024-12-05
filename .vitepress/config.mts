@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   head: [['link', { rel: 'icon', href: '/gw.ico' }]],
-  // base: '/gw_admin/',
+  base: '/gw_admin/',
   title: "GW_Admin",
   // titleTemplate: ':title - Custom Suffix',
   description: "GW",
