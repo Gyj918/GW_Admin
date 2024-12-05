@@ -21,8 +21,8 @@ export default defineConfig({
     // },
     nav: [
       { text: '首页', link: '/' },
-      { text: '前端视野', link: '/front-end' },
-      { text: '工作内容', link: '/work' },
+      { text: '项目展示', link: '/front-end' },
+      { text: '学习分享', link: '/work' },
       { text: '博客', link: 'https://blog.csdn.net/m0_46833693' },
       // {
       //   text: '加入我们',
@@ -35,37 +35,39 @@ export default defineConfig({
     sidebar: {
       '/front-end/': [
         {
-          text: '前端',
+          text: '工业自动化与信息化集成项目',
           items: [
-            { text: '必备技能', link: '/front-end/' },
-            { text: '发展方向', link: '/front-end/life' },
-            { text: '作者介绍', link: '/front-end/user' },
-            {
-              text: '技术栈',
-              items: [
-                { text: 'React', link: '...' },
-                { text: 'Vue.js', link: '...' },
-                { text: 'Angular', link: '...' },
-                { text: 'jQuery', link: '...' },
-                { text: 'Bootstrap', link: '...' },
-                { text: 'Webpack', link: '...' },
-                { text: 'Vite', link: '...' },
-                { text: 'Zustand', link: '...' }
-              ]
-            },
+            { text: '低压配电室智能运维系统', link: '/front-end/user' },
+            { text: '中粮番茄数据采集系统', link: '/front-end/' },
+            { text: '东方驼铃食品自动控料系统', link: '/front-end/life' },  
+            { text: 'M-inDH数据采集网关产品', link: '/front-end/life' },  
+          ]
+        },
+        {
+          text: '信息化系统项目',
+          items: [
+            { text: '踢球吧', link: '/front-end/user' },
+            { text: '好麦小程序', link: '/front-end/' },
           ]
         }
       ],
       '/work/': [
         {
-          text: '工作内容',
+          text: '学习分享',
           items: [
-            { text: '现场工作', link: '/work/' },
-            { text: '生活',
+            { text: '业务能力', link: '/work/' },
+            { text: '技术分享',
               items:[
-                { text: '我的一天', link: '/work/scene' },
-                { text: '刘卓的一天', link: '/work/lz' },
-                { text: '陈财的一天', link: '/work/cc' },
+                { text: '前端必备技能', link: '/work/hcj' },
+                { text: 'TypeScript', link: '/work/ts' },
+                { text: 'Three.js', link: '/work/threejs' },
+                { text: 'Vue', link: '/work/v3' },
+                { text: 'HarmonyOS', link: '/work/hm' },
+                { text: 'React', link: '/work/react' },
+                { text: 'CI/CD（Jenkins/Docker）', link: '/work/cicd' },
+                { text: '小程序', link: '/work/applet' },
+                { text: 'Node.js', link: '/work/node' },
+                { text: '若依入门（Springboot版）', link: '/work/ry' },
               ]
              },
           ]
@@ -88,7 +90,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '本项目由 GYJ 开发，王倩蓉维护',
+      message: '本项目由 GYJ 开发维护',
       copyright: 'Copyright © 2024-present GYJ'
     },
 
