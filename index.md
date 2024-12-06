@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 项目展示
-      link: /front-end/user
+      link: /front-end/
     - theme: alt
       text: 知识库
       link: /work
