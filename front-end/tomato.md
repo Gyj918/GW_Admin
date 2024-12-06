@@ -1,0 +1,40 @@
+---
+   outline: [2,5]
+---
+# 中粮番茄生产管理平台
+---
+
+### **一. 项目名称**
+`中粮番茄生产管理平台`
+### **二、项目时间**
+`2024年5月 - 2024年10月`
+### **三、项目角色**
+ `Web前端工程师 、工程助理 `
+### **四、项目简介**
+中粮番茄生产管理平台主要涉及生产线工艺数据采集和能源采集两部分的改造，其中生产线工艺数据采集实现大包装工厂主要工艺设备运行参数的实时监控、异常报警、智能推送、生产统计报表。能源数据采集实现各工厂能源数据实时计量、能源统计报表。生产线工艺数据采集计划实施10家大包装工厂，*条生产线，主要包含前处理、蒸发、杀菌/闪蒸、灌装主要工艺。
+
+通过生产过程生产工艺设备运行参数的实时监控、异常报警、智能推送、生产统计报表、能源实时计量、能源统计报表，实现对生产工艺数据、能源计量的全过程监控，及时发现生产过程中存在的问题，保障生产设备的高效运行，以达到提高生产效率、精细化管理的目的。
+
+### **五、技术栈与工具**
+- 编程语言：`JavaScript、Scss`
+- 框架与库：`Vue3、VueRouter、Pinia、ElementPlus；React、antd、React-router（h5）`
+- 开发工具：`Visual Studio Code, Git`
+- 部署：`内网部署`
+
+### **六、关键职责与成就**
+
+- **职责**：现场工艺组态画面（Scada）设计与实现，成功将Scada系统接入管理平台，实现数据无缝对接和统一管理，支持企业自动化生产和智能化管理。
+- **职责**：各工厂自动化设备数据点位整理，采集，使用 mqtt、Lora 方式传送。
+- **职责**：根据用户需求开发多种报表，优化数据加载，提升页面响应速度。
+- **职责**：基于第三方的组件进行二次封装，解决业务痛点，提高研发效率。
+
+### **七、项目展示**
+`项目截图所展示的内容仅为项目的一部分，且并非核心或敏感信息。但请注意，这些截图受到严格的版权保护，其所有权归原作者或相关权利人所有。`
+
+`郑重声明：严禁任何形式的盗用或未经授权的传播。任何违反此规定的行为，我们都将依法追究其法律责任，以维护我们的合法权益。`
+- **项目截图**
+<div style="display: flex;flex-direction: column;justify-content: space-around; align-items: center;">
+  <img src="https://raw.githubusercontent.com/Gyj918/img/refs/heads/master/zl/1.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="https://raw.githubusercontent.com/Gyj918/img/refs/heads/master/zl/2.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="https://raw.githubusercontent.com/Gyj918/img/refs/heads/master/zl/3.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+</div>

@@ -24,30 +24,33 @@ export default defineConfig({
       { text: '项目展示', link: '/front-end' },
       { text: '学习分享', link: '/work' },
       { text: '博客', link: 'https://blog.csdn.net/m0_46833693' },
-      // {
-      //   text: '加入我们',
-      //   items: [
-      //     { text: '人才招聘', link: 'https://blog.csdn.net/m0_46833693/article/details/140517776', target: '_self', rel: 'sponsored' },
-      //     { text: '联系我们', link: '/markdown-examples' }
-      //   ]
-      // },
+      { text: '联系作者', 
+        items: [
+          {
+            text: '作者邮箱-17789424151@163.com',
+            link: 'https://mail.163.com/',  // 修改为网易邮箱的URL
+            target: '_blank',  // 通常建议在新标签页中打开外部链接
+            rel: 'noopener noreferrer'  // 提高安全性，防止新页面通过opener属性访问原始页面
+          }
+        ]
+       },
     ],
     sidebar: {
       '/front-end/': [
         {
           text: '工业自动化与信息化集成项目',
           items: [
-            { text: '低压配电室智能运维系统', link: '/front-end/user' },
-            { text: '中粮番茄数据采集系统', link: '/front-end/' },
-            { text: '东方驼铃食品自动控料系统', link: '/front-end/life' },  
-            { text: 'M-inDH数据采集网关产品', link: '/front-end/life' },  
+            { text: '低压配电室智能运维系统', link: '/front-end/' },
+            { text: '中粮番茄生产管理平台', link: '/front-end/tomato' },
+            { text: '东方驼铃食品自动控料系统', link: '/front-end/food' },  
+            { text: 'M-inDH数据采集网关产品', link: '/front-end/gateway' },  
           ]
         },
         {
           text: '信息化系统项目',
           items: [
-            { text: '踢球吧', link: '/front-end/user' },
-            { text: '好麦小程序', link: '/front-end/' },
+            { text: '踢球吧', link: '/front-end/kick' },
+            { text: '好麦小程序', link: '/front-end/hmc' },
           ]
         }
       ],
@@ -55,23 +58,24 @@ export default defineConfig({
         {
           text: '学习分享',
           items: [
-            { text: '业务能力', link: '/work/' },
-            { text: '技术分享',
-              items:[
-                { text: '前端必备技能', link: '/work/hcj' },
-                { text: 'TypeScript', link: '/work/ts' },
-                { text: 'Three.js', link: '/work/threejs' },
-                { text: 'Vue', link: '/work/v3' },
-                { text: 'HarmonyOS', link: '/work/hm' },
-                { text: 'React', link: '/work/react' },
-                { text: 'CI/CD（Jenkins/Docker）', link: '/work/cicd' },
-                { text: '小程序', link: '/work/applet' },
-                { text: 'Node.js', link: '/work/node' },
-                { text: '若依入门（Springboot版）', link: '/work/ry' },
-              ]
-             },
+            { text: '前端发展史', link: '/work/' },
           ]
-        }
+        },
+        { text: '技术分享',
+          items:[
+            { text: '前端必备技能', link: '/work/hcj' },
+            { text: 'TypeScript', link: '/work/ts' },
+            { text: 'Three.js', link: '/work/threejs' },
+            { text: 'Vue', link: '/work/v3' },
+            { text: 'HarmonyOS', link: '/work/hm' },
+            { text: 'React', link: '/work/react' },
+            { text: 'CI/CD（Jenkins/Docker）', link: '/work/cicd' },
+            { text: '小程序', link: '/work/applet' },
+            { text: 'Node.js', link: '/work/node' },
+            { text: '若依入门（Springboot版）', link: '/work/ry' },
+            { text: '前端工程化', link: '/work/buildTool' },
+          ]
+         },
       ]
     },
     // aside: 'left',

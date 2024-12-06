@@ -1,46 +1,52 @@
 ---
 outline: [2,6]
 ---
-随着Web技术的飞速发展，前端工程师的角色日益重要，成为了连接用户与数据、服务与体验的桥梁。为了在这个快速变化的领域保持竞争力，掌握一系列核心技能是必不可少的。以下是一份前端工程师必备技能的概览，旨在帮助您或您的团队持续成长，应对未来的挑战。
 
-### 1. HTML/CSS/JavaScript基础
+# 低压配电室智能运维系统
 
-- **HTML**：掌握HTML5标准，熟悉语义化标签，能够构建结构清晰、易于维护的网页结构。
-- **CSS**：精通CSS3，包括选择器、布局技术（Flexbox、Grid）、动画与过渡等，能够创建响应式、美观的界面。
-- **JavaScript**：深入理解JavaScript语言核心，包括变量、数据类型、函数、作用域、闭包、原型链等，以及ES6+的新特性。
+---
 
-### 2. 框架与库
-<div style='background-color: #3fb581; padding: 10px; border-radius: 5px; margin: 10px 0'>
-React/Vue/Angular：至少精通一种现代前端框架，理解其组件化、状态管理、路由等核心概念，并能高效开发复杂应用。<br>
-Redux/Vuex/NgRx：对于使用状态管理库的项目，理解其工作原理，能够构建高效、可维护的状态管理逻辑。<br>
-jQuery/Axios/Fetch API：虽然现代框架逐渐减少了对jQuery的依赖，但了解其原理及用法仍有价值；同时，熟练使用Axios或Fetch API进行网络请求。
+### **一. 项目名称**
+`国投罗钾软钾车间低压配电室智能电力运维系统`
+### **二、项目时间**
+`2024年8月 - 2025年9月`
+### **三、项目角色**
+ `项目经理、Web前端工程师 `
+### **四、项目简介**
+国投新疆罗布泊钾盐有限责任公司硫酸钾厂的软钾车间在电力供应和管理方面，面临现有系统效率低下、人工依赖性强及故障响应速度慢等诸多挑战。随着企业向智能化和数字化转型需求的增加，对高效数据处理技术、先进的智能管理以及云端解决方案的需求也日益迫切。
+
+本次智能运维管理系统建设项目旨在通过数据采集与监视控制系统（SCADA）实现对低压配电室的实时监控、数据分析及智能化管理，提高配电系统的可靠性和维护效率，降低运行风险和维护成本。
+
+### **五、技术栈与工具**
+- 编程语言：`JavaScript、Scss`
+- 框架与库：`Vue3、VueRouter、Pinia、ElementPlus、WebSocket、Echarts`
+- 开发工具：`Visual Studio Code, Git`
+- 部署：`本地部署, Docker`
+
+### **六、关键职责与成就**
+
+- **职责**：负责项目开发管理以及业务对接。
+- **职责**：基于第三方的组件进行二次封装，解决业务痛点，提高研发效率。
+- **职责**：综合运用服务器端事件（SSE）与 WebSocket 通信技术，并结合 Three.js 实现大屏可视化。
+- **职责**：通过 Vue.js 和 React 框架，构建高效的前端应用，实现实时数据展示和交互功能。
+- **职责**：在物联网（IoT）技术框架下，运用 MQTT 协议实现配电室内设备的数据采集与传输。
+- **职责**：实现了基于 Web 的实时数据监控和报警系统，提高了运维效率和故障响应速度。
+- **职责**：通过 Docker 容器化部署，实现系统的快速部署和扩展，提高系统的稳定性和可维护性。
+
+- **成就**：自项目上线以来，系统的运行效果得到了显著验证。在数据采集的准确性和实时性方面表现出色，所有传感器和数据采集终端工作稳定，数据传输延迟低于50毫秒。系统上线后，用户满意度显著提升。用户界面的友好设计、操作逻辑的清晰易懂以及快速响应的服务支持，都大大增强了用户的信任感和忠诚度。
+
+
+
+### **七、项目展示**
+`项目截图所展示的内容仅为项目的一部分，且并非核心或敏感信息。但请注意，这些截图受到严格的版权保护，其所有权归原作者或相关权利人所有。`
+
+`郑重声明：严禁任何形式的盗用或未经授权的传播。任何违反此规定的行为，我们都将依法追究其法律责任，以维护我们的合法权益。`
+- **项目截图**
+<div style="display: flex;flex-direction: column;justify-content: space-around; align-items: center;">
+  <img src="https://raw.githubusercontent.com/Gyj918/img/refs/heads/master/power/1.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="https://raw.githubusercontent.com/Gyj918/img/refs/heads/master/power/2.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="https://raw.githubusercontent.com/Gyj918/img/refs/heads/master/power/3.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="https://raw.githubusercontent.com/Gyj918/img/refs/heads/master/power/4.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="https://raw.githubusercontent.com/Gyj918/img/refs/heads/master/power/5.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="https://raw.githubusercontent.com/Gyj918/img/refs/heads/master/power/6.png" alt="项目截图" width="90%" style="margin: 10px;"/>
 </div>
-
-### 3. 版本控制与团队协作
-
-- **Git**：掌握Git的基本命令及高级用法，如分支管理、合并冲突解决、代码回滚等，参与高效的版本控制流程。
-- **GitHub/GitLab/Bitbucket**：熟悉至少一个代码托管平台，了解其项目管理、Pull Request、Code Review等协作机制。
-
-### 4. 性能优化与调试
-
-- **性能分析**：了解Web页面加载机制，能使用Chrome DevTools等工具进行性能分析，优化加载时间、响应速度等。
-- **调试技巧**：掌握断点调试、错误追踪、性能瓶颈识别等技能，快速定位并解决问题。
-
-### 5. 响应式设计与可访问性
-
-- **响应式设计**：理解媒体查询、百分比布局、视口单位等，能够创建在不同设备上都能良好展示的网页。
-- **可访问性（A11y）**：遵循WCAG准则，确保网站内容对所有用户（包括使用辅助技术的用户）都是可访问的。
-
-### 6. 自动化与构建工具
-
-- **Webpack/Vite**：了解并熟练使用至少一种现代构建工具，配置模块打包、资源优化、代码分割等。
-- **Babel/TypeScript**：使用Babel进行JavaScript语法转换，或使用TypeScript增加类型检查和开发效率。
-- **ESLint/Prettier**：配置并使用代码质量工具和格式化工具，保持代码风格一致，提高代码质量。
-
-### 7. 前沿技术与趋势
-
-- **PWA（Progressive Web Apps）**：了解PWA的概念和优势，如离线访问、快速加载、添加到主屏幕等。
-- **WebAssembly/WASM**：关注高性能计算方向，了解WebAssembly技术及其在前端的应用。
-- **Serverless/Jamstack**：了解无服务器架构和Jamstack（JavaScript, APIs, Markup Stack）的概念，探索未来前端开发的新模式。
-
-作为前端工程师，持续学习、紧跟技术趋势是非常重要的。希望这份必备技能概览能为您的职业生涯发展提供一些指导和帮助。祝您在未来的技术道路上越走越远，取得更加辉煌的成就！
