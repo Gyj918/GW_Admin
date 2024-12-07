@@ -15,10 +15,10 @@ export default defineConfig({
       provider: 'local'
     },
     // 广告
-    // carbonAds: {
-    //   code: 'your-carbon-code',
-    //   placement: 'your-carbon-placement'
-    // },
+    carbonAds: {
+      code: 'your-carbon-code',
+      placement: 'your-carbon-placement'
+    },
     nav: [
       { text: '首页', link: '/' },
       { text: '项目展示', link: '/front-end' },
@@ -94,10 +94,10 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '本项目由 GYJ 开发维护',
-      copyright: 'Copyright © 2024-present GYJ'
+      message: '基于 MIT 许可发布',
+      copyright: '版权所有 © 2023-2024 高云吉'
     },
-
+    
     // editLink: {
     //   pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
     //   text: 'Edit this page on GitHub'

@@ -2,7 +2,7 @@
   outline: [2,6]
 ---
 <div style="display: flex; justify-content: center; align-items: center; text-align: center">
-   <h1>HarmonyOS</h1> <img src='/hm.svg'/>
+   <h1>HarmonyOS</h1> <Badge type="warning" text="熟练" /> <img src='/hm.svg'/>
 </div>
 
 `“技术分享章节的所有内容，均源自作者个人的学习心得与整理。在此，诚挚地邀请各位读者审阅，若您发现其中有任何错误或不足之处，敬请不吝赐教，及时指出，以便不断修正和完善。”`
