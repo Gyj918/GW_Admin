@@ -43,10 +43,10 @@ outline: [2,6]
 `郑重声明：严禁任何形式的盗用或未经授权的传播。任何违反此规定的行为，我们都将依法追究其法律责任，以维护我们的合法权益。`
 - **项目截图**
 <div style="display: flex;flex-direction: column;justify-content: space-around; align-items: center;">
-  <img src="../public/power/1.png" alt="项目截图" width="90%" style="margin: 10px;"/>
-  <img src="../public/power/2.png" alt="项目截图" width="90%" style="margin: 10px;"/>
-  <img src="../public/power/3.png" alt="项目截图" width="90%" style="margin: 10px;"/>
-  <img src="../public/power/4.png" alt="项目截图" width="90%" style="margin: 10px;"/>
-  <img src="../public/power/5.png" alt="项目截图" width="90%" style="margin: 10px;"/>
-  <img src="../public/power/6.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="/power/1.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="/power/2.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="/power/3.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="/power/4.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="/power/5.png" alt="项目截图" width="90%" style="margin: 10px;"/>
+  <img src="/power/6.png" alt="项目截图" width="90%" style="margin: 10px;"/>
 </div>

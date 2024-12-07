@@ -43,14 +43,14 @@ export default defineConfig({
             { text: '低压配电室智能运维系统', link: '/front-end/' },
             { text: '中粮番茄生产管理平台', link: '/front-end/tomato' },
             { text: '东方驼铃食品自动控料系统', link: '/front-end/food' },  
-            { text: 'M-inDH数据采集网关产品', link: '/front-end/gateway' },  
+            { text: 'M-inDH数据采集网关', link: '/front-end/gateway' },  
           ]
         },
         {
           text: '信息化系统项目',
           items: [
-            { text: '踢球吧', link: '/front-end/kick' },
-            { text: '好麦小程序', link: '/front-end/hmc' },
+            { text: '踢球吧管理系统', link: '/front-end/kick' },
+            { text: '好麦司机端小程序', link: '/front-end/hmc' },
           ]
         }
       ],
@@ -106,13 +106,6 @@ export default defineConfig({
     docFooter: {
       prev: '上一篇',
       next: '下一篇'
-    },
-    lastUpdated: {
-      text: 'Updated at',
-      formatOptions: {
-        dateStyle: 'full',
-        timeStyle: 'medium'
-      }
     }
   }
 })
