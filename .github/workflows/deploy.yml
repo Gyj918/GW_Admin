@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
 
-# 设置 token 访问权限
+# 设置tokenn访问权限
 permissions:
   contents: read
   pages: write
@@ -22,40 +22,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4  # 更新到 v4
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2 # 安装 pnpm 并添加到环境变量
+        uses: pnpm/action-setup@v2 # 安装pnpm并添加到环境变量
         with:
           version: 8.6.12 # 指定需要的 pnpm 版本
       - name: Setup Node
-        uses: actions/setup-node@v4  # 更新到 v4
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: pnpm # 设置缓存
       - name: Setup Pages
-        uses: actions/configure-pages@v4  # 更新到 v4
+        uses: actions/configure-pages@v4  # 在工作流程自动配置GithubPages
       - name: Install dependencies
         run: pnpm install # 安装依赖
       - name: Build with VitePress
         run: |
           pnpm run docs:build # 启动项目
-          touch .nojekyll  # 通知 GitHub Pages 不要使用 Jekyll 处理这个站点
+          touch .nojekyll  # 通知githubpages不要使用Jekyll处理这个站点，不知道为啥不生效，就手动搞了
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # 更新到 v3
+        uses: actions/upload-pages-artifact@v2  # 上传构建产物
         with:
-          path: .vitepress/dist # 指定上传的路径
+          path: .vitepress/dist # 指定上传的路径，当前是根目录，如果是docs需要加docs/的前缀
 
   # 部署工作
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }} # 从后续的输出中获取部署后的页面 URL
-    needs: build    # 在 build 后面完成
-    runs-on: ubuntu-latest  # 运行在最新版本的 ubuntu 系统上
+      url: ${{ steps.deployment.outputs.page_url }} # 从后续的输出中获取部署后的页面URL
+    needs: build    # 在build后面完成
+    runs-on: ubuntu-latest  # 运行在最新版本的ubuntu系统上
     name: Deploy
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment  # 指定 id
-        uses: actions/deploy-pages@v3  # 更新到 v3
+        id: deployment  # 指定id
+        uses: actions/deploy-pages@v2 # 将之前的构建产物部署到github pages中
