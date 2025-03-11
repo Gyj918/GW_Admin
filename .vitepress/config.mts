@@ -21,7 +21,7 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
-      { text: '项目展示', link: '/front-end' },
+      { text: '业务项目展示', link: '/front-end' },
       { text: '学习分享', link: '/work' },
       { text: '博客', link: 'https://blog.csdn.net/m0_46833693' },
       { text: '联系作者', 
@@ -95,7 +95,7 @@ export default defineConfig({
 
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: '版权所有 © 2023-2024 高云吉'
+      copyright: '版权所有 © 2023-2025 高云吉'
     },
     
     // editLink: {

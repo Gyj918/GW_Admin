@@ -1,4 +1,4 @@
-# **基于RuoYi的HarmonyOS5.0版移动端** <Badge type="warning" text="beta" />
+# **基于RuoYi的HarmonyOS5.0版移动端** <Badge type="tip" text="开源" />
 
 ## 项目概述
 

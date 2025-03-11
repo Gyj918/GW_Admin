@@ -7,34 +7,71 @@ hero:
   text: "在心里种花，人生才不会荒芜"
   tagline: 那就让我们相约，在不久的将来，能够再次相见
   image:
-    src: /background.png
+    src: /back.png
     alt: GW_Admin
   actions:
     - theme: brand
-      text: 项目展示
+      text: 业务项目展示
       link: /front-end/
     - theme: alt
       text: 知识库
       link: /work
 
 features:
-  - icon: 🛠️
+  - icon: <img src="Vue.svg" alt="Vue"/>
     title: Vue3 项目
     details: Vue3实战，打造个性化前端应用
     link: /projects/Vue
     linkText: 查看更多
-  - icon: 🧑‍💻
+  - icon: <img src="hm.svg" alt="鸿蒙"/>
     title: HarmonyOS 项目
     details: 华为鸿蒙系统应用，跨界融合新体验
     link: /projects/HarmonyOS
     linkText: 查看更多
-  - icon: 🚀
+  - icon: <img src="react.svg" alt="React"/>
     title: React 项目
     details: React实战，构建动态个人作品集
     link: /projects/React
     linkText: 查看更多
+  - icon: <img src="Node.svg" alt="Node"/>
+    title: Node.js 项目
+    details: Node.js实战，构建强大的后端服务
+    link: /projects/Node
+    linkText: 查看更多
+  - icon: <img src="uni-app.svg" alt="uni-app"/>
+    title: uni-app 项目
+    details: uni-app实战，个性化小程序应用
+    link: /projects/uni-app
+    linkText: 查看更多
+  - icon: <img src="qianduan.svg" alt="web"/>
+    title: 脚手架项目
+    details: 前端脚手架，助力团队开发效率
+    link: /projects/Scaffold
+    linkText: 查看更多
+  - icon: <img src="next.svg" alt="Next"/>
+    title: Next.js项目
+    details: Next.js实战，构建高性能的全栈应用
+    link: /projects/Next
+    linkText: 查看更多 
+  - icon: <img src="deepseek.svg" alt="ai"/>
+    title: AI对IT行业的影响研究报告
+    details: 人工智能对IT行业的影响研究报告
+    link: /projects/AI
+    linkText: 查看更多
 
 ---
+<div class="tech-container">
+  <div class="video-container">
+    <video 
+      src="/jg.mp4" 
+      autoplay 
+      loop 
+      muted 
+      controls
+      class="custom-video"
+    ></video>
+  </div>
+</div>
 
 
 <script setup>
@@ -83,3 +120,91 @@ const members = [
 专注实战，以高效协作打造优质软件解决方案
 
 <VPTeamMembers size="small" :members="members" />
+
+
+
+
+<style>
+.tech-container {
+  background: linear-gradient(145deg, #0a0a1a, #1a1a2e);
+  padding: 40px 20px;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 204, 0.2),
+    transparent
+  );
+  animation: slide 6s linear infinite;
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.video-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent, #00ffcc, transparent 30%
+  );
+  animation: rotate 6s linear infinite;
+}
+
+.custom-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.tech-container:hover::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 0, 204, 0.2),
+    rgba(0, 255, 204, 0.2),
+    transparent
+  );
+}
+</style>
