@@ -2,7 +2,9 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  head: [['link', { rel: 'icon', href: '/gw.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   base: '/GW_Admin/',
   title: "GW_Admin",
   // titleTemplate: ':title - Custom Suffix',
@@ -21,7 +23,7 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
-      { text: '业务项目展示', link: '/front-end' },
+      { text: '业务项目', link: '/front-end' },
       { text: '学习分享', link: '/work' },
       { text: '博客', link: 'https://blog.csdn.net/m0_46833693' },
       { text: '联系作者', 
@@ -40,7 +42,9 @@ export default defineConfig({
         {
           text: '工业自动化与信息化集成项目',
           items: [
-            { text: '低压配电室智能运维系统', link: '/front-end/' },
+            { text: '奎屯中区污水厂智慧水务项目', link: '/front-end/'  },
+            { text: '企业官网项目', link: '/front-end/website'  },
+            { text: '低压配电室智能运维系统', link: '/front-end/power' },
             { text: '中粮番茄生产管理平台', link: '/front-end/tomato' },
             { text: '东方驼铃食品自动控料系统', link: '/front-end/food' },  
             { text: 'M-inDH数据采集网关', link: '/front-end/gateway' },  
@@ -63,17 +67,20 @@ export default defineConfig({
         },
         { text: '技术分享',
           items:[
-            { text: '前端必备技能', link: '/work/hcj' },
-            { text: 'TypeScript', link: '/work/ts' },
-            { text: 'Three.js', link: '/work/threejs' },
-            { text: 'Vue', link: '/work/v3' },
-            { text: 'HarmonyOS', link: '/work/hm' },
-            { text: 'React', link: '/work/react' },
-            { text: 'CI/CD（Jenkins/Docker）', link: '/work/cicd' },
-            { text: '小程序', link: '/work/applet' },
-            { text: 'Node.js', link: '/work/node' },
-            { text: '若依入门（Springboot版）', link: '/work/ry' },
-            { text: '前端工程化', link: '/work/buildTool' },
+            { text: '1. 前端必备技能', link: '/work/hcj' },
+            { text: '2. TypeScript', link: '/work/ts' },
+            { text: '3. Three.js', link: '/work/threejs' },
+            { text: '4. Vue', link: '/work/v3' },
+            { text: '5. HarmonyOS', link: '/work/hm' },
+            { text: '6. React', link: '/work/react' },
+            { text: '7. CI/CD（Jenkins/Docker）', link: '/work/cicd' },
+            { text: '8. 小程序', link: '/work/applet' },
+            { text: '9. Next.js', link: '/work/next' },
+            { text: '10. Electron', link: '/work/electron' },
+            { text: '11. Node.js', link: '/work/node' },
+            { text: '12. 若依入门（Springboot版）', link: '/work/ry' },
+            { text: '13. 前端工程化', link: '/work/buildTool' },
+            { text: '14. VitePress', link: '/work/vitepress'  },
           ]
          },
       ]

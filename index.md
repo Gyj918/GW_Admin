@@ -11,7 +11,7 @@ hero:
     alt: GW_Admin
   actions:
     - theme: brand
-      text: 业务项目展示
+      text: 业务项目
       link: /front-end/
     - theme: alt
       text: 知识库
