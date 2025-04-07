@@ -21,7 +21,7 @@ features:
   - icon: <img src="deepseek.svg" alt="AI"/>
     title: Code Pal-VSCode Extension
     details: 一只住在编辑器里的电子宠物，陪伴你的编程之旅，随着代码成长！
-    link: /projects/Ai
+    link: /projects/AI
     linkText: 查看更多
   - icon: <img src="Vue.svg" alt="Vue"/>
     title: Vue3 项目
