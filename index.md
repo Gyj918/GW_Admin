@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "GW_Admin"
   text: "在心里种花，人生才不会荒芜"
-  tagline: 那就让我们相约，在不久的将来，能够再次相见
+  tagline: Ruoyi贡献者 | Code Pal作者 | 鸿蒙高级工程师
   image:
     src: /back.png
     alt: GW_Admin
@@ -18,6 +18,11 @@ hero:
       link: /work
 
 features:
+  - icon: <img src="deepseek.svg" alt="AI"/>
+    title: Code Pal-VSCode Extension
+    details: 一只住在编辑器里的电子宠物，陪伴你的编程之旅，随着代码成长！
+    link: /projects/Ai
+    linkText: 查看更多
   - icon: <img src="Vue.svg" alt="Vue"/>
     title: Vue3 项目
     details: Vue3实战，打造个性化前端应用
@@ -53,12 +58,6 @@ features:
     details: Next.js实战，构建高性能的全栈应用
     link: /projects/Next
     linkText: 查看更多 
-  - icon: <img src="deepseek.svg" alt="ai"/>
-    title: AI对IT行业的影响研究报告
-    details: 人工智能对IT行业的影响研究报告
-    link: /projects/AI
-    linkText: 查看更多
-
 ---
 <div class="tech-container">
   <div class="video-container">

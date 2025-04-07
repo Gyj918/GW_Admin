@@ -3,6 +3,12 @@
 ---
 # Node.js 版本商城后台管理系统 <Badge type="tip" text="开源" />
 
+![React](https://img.shields.io/badge/Express-4.18-green?logo=express)
+
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)
+
+![Stars](https://img.shields.io/badge/Stars-30⭐-brightgreen)
+
 **项目简介**
 
 本项目是一个基于 Node.js 的商城后台管理系统，采用前后端分离架构，提供了一套完整的电商后台管理功能，包括商品管理、订单管理、用户管理、数据统计等模块。项目代码简洁清晰，易于理解和二次开发，适合用于学习和构建中小型电商平台。

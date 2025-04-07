@@ -1,5 +1,12 @@
 # **基于RuoYi的HarmonyOS5.0版移动端** <Badge type="tip" text="开源" />
 
+![HarmonyOS](https://img.shields.io/badge/HarmonyOS-5.0-blue?logo=harmonyos)
+
+![ArkUI](https://img.shields.io/badge/ArkUI-3.0-green?logo=arkui)
+
+![RuoYi](https://img.shields.io/badge/RuoYi-4.7.6-orange?logo=ruoyi)
+
+
 ## 项目概述
 
 全新的移动端应用，它基于开源的RuoYi框架，并深度整合了华为HarmonyOS 5.0系统的先进特性。这款应用不仅继承了RuoYi框架在Web开发中的高效、稳定与易用性，还充分利用了HarmonyOS 5.0在分布式技术、设备协同、安全隐私保护以及系统级性能优化等方面的优势，为用户带来了前所未有的使用体验。
