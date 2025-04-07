@@ -59,19 +59,6 @@ features:
     link: /projects/Next
     linkText: 查看更多 
 ---
-<div class="tech-container">
-  <div class="video-container">
-    <video 
-      src="/jg.mp4" 
-      autoplay 
-      loop 
-      muted 
-      controls
-      class="custom-video"
-    ></video>
-  </div>
-</div>
-
 
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
@@ -114,12 +101,51 @@ const members = [
 ]
 </script>
 
-## 团队成员
+
+
+## <i class="icon-title icon-timeline"></i> 发展历程
+
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-date">2025.04</div>
+    <div class="timeline-card">
+      <h3>Code Pal 发布</h3>
+      <p>成功发布VSCode扩展Code Pal，一只住在编辑器里的电子宠物，陪伴你的编程之旅，随着代码成长！</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">2024.12</div>
+    <div class="timeline-card">
+      <h3>鸿蒙应用上线</h3>
+      <p>首个HarmonyOS应用在华为应用市场发布，拓展Ruoyi生态，成功入选Ruoyi生态库</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">2024.11</div>
+    <div class="timeline-card">
+      <h3>开源贡献</h3>
+      <p>成为Ruoyi框架核心贡献者，参与了多个核心模块的开发和优化</p>
+    </div>
+  </div>
+</div>
+<div class="tech-container">
+  <div class="video-container">
+    <video 
+      src="/jg.mp4" 
+      autoplay 
+      loop 
+      muted 
+      controls
+      class="custom-video"
+    ></video>
+  </div>
+</div>
+
+## <i class="icon-title icon-team"></i> 团队成员
 
 专注实战，以高效协作打造优质软件解决方案
 
 <VPTeamMembers size="small" :members="members" />
-
 
 
 
@@ -206,4 +232,176 @@ const members = [
     transparent
   );
 }
+.timeline {
+  position: relative;
+  padding: 40px 0; /* 减少上下padding */
+  margin: 1.5rem 0; /* 减少外边距 */
+}
+
+.timeline-item {
+  position: relative;
+  width: 46%;
+  padding: 20px; /* 减少内边距 */
+  margin-bottom: 20px; /* 减少卡片间距 */
+  background: linear-gradient(145deg, rgba(30, 30, 50, 0.8), rgba(20, 20, 40, 0.9));
+  border-radius: 12px; /* 调整圆角 */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px); /* 减少位移 */
+  box-shadow: 0 8px 24px rgba(100, 255, 218, 0.15); /* 调整阴影 */
+  overflow: hidden;
+}
+
+.timeline-card h3 {
+  font-size: 18px; /* 减小标题字体 */
+  margin-bottom: 12px;
+}
+
+.timeline-card p {
+  line-height: 1.6;
+  font-size: 14px; /* 减小正文字体 */
+}
+
+.timeline-item:hover {
+  background: linear-gradient(145deg, rgba(40, 40, 60, 0.9), rgba(30, 30, 50, 0.95));
+  box-shadow: 0 15px 35px rgba(100, 255, 218, 0.25);
+}
+
+.timeline-card h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  position: relative;
+  color: #00ffcc;
+  text-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+}
+
+.timeline-card p {
+  line-height: 1.8;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #00ffcc, #ff00cc);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  background: #00ffcc;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(0, 255, 204, 0.2);
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -38px;
+}
+
+.timeline-item:nth-child(even) {
+  left: 54%;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -38px;
+}
+
+.timeline-date {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00ffcc;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  background: rgba(0, 255, 204, 0.1);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.timeline-card h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.timeline-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, #00ffcc, #ff00cc);
+}
+
+.timeline-card p {
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-item::before {
+    display: none;
+  }
+}
+/* 新增图标样式 */
+.icon-title {
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.icon-timeline {
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%2300ffcc" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 100 16 8 8 0 000-16zm1 1v6h5v2h-5v2h-2v-2H6v-2h5V5h2z"/></svg>');
+}
+
+.icon-team {
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%2300ffcc" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 100 16 8 8 0 000-16zm0 3c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0 7c2.21 0 4 1.79 4 4v1H8v-1c0-2.21 1.79-4 4-4z"/></svg>');
+}
+
+/* 修改h2标题颜色 */
+h2 {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  background: linear-gradient(120deg, #bd34fe 20%, #41d1ff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 2rem 0 1.5rem;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(0, 255, 204, 0.2);
+}
+
+h2::after {
+  content: '';
+  flex: 1;
+  margin-left: 16px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(0, 255, 204, 0.2), transparent);
+}
 </style>
+
