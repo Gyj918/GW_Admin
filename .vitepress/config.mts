@@ -36,6 +36,7 @@ export default defineConfig({
           }
         ]
        },
+       { text: '开源团队', link: '/team' },
     ],
     sidebar: {
       '/front-end/': [
@@ -60,9 +61,9 @@ export default defineConfig({
       ],
       '/work/': [
         {
-          text: '学习分享',
+          text: '作品集',
           items: [
-            { text: '前端发展史', link: '/work/' },
+            { text: '作品目录', link: '/work/' },
           ]
         },
         { text: '技术分享',
