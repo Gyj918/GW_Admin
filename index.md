@@ -82,7 +82,7 @@ features:
     <div class="timeline-date">2024.11</div>
     <div class="timeline-card">
       <h3>开源贡献</h3>
-      <p>成为Ruoyi框架核心贡献者，参与了多个核心模块的开发和优化</p>
+      <p>成为Ruoyi框架生态贡献者，参与了功能模块的开发和优化</p>
     </div>
   </div>
 </div>
