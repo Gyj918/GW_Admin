@@ -26,7 +26,8 @@ export default defineConfig({
       { text: '业务项目', link: '/front-end' },
       { text: '学习分享', link: '/work' },
       { text: '博客', link: 'https://blog.csdn.net/m0_46833693' },
-      { text: '联系作者', 
+      {
+        text: '联系作者',
         items: [
           {
             text: '作者邮箱-17789424151@163.com',
@@ -35,25 +36,27 @@ export default defineConfig({
             rel: 'noopener noreferrer'  // 提高安全性，防止新页面通过opener属性访问原始页面
           }
         ]
-       },
-       { text: '开源团队', link: '/team' },
+      },
+      { text: '开源团队', link: '/team' },
     ],
     sidebar: {
       '/front-end/': [
         {
           text: '工业自动化与信息化集成项目',
           items: [
-            { text: '奎屯中区污水厂智慧水务项目', link: '/front-end/'  },
-            { text: '企业官网项目', link: '/front-end/website'  },
+            { text: '奎屯中区污水厂智慧水务项目', link: '/front-end/' },
+            { text: '企业官网项目', link: '/front-end/website' },
             { text: '低压配电室智能运维系统', link: '/front-end/power' },
             { text: '中粮番茄生产管理平台', link: '/front-end/tomato' },
-            { text: '东方驼铃食品自动控料系统', link: '/front-end/food' },  
-            { text: 'M-inDH数据采集网关', link: '/front-end/gateway' },  
+            { text: '东方驼铃食品自动控料系统', link: '/front-end/food' },
+            { text: 'M-inDH数据采集网关', link: '/front-end/gateway' },
           ]
         },
         {
           text: '信息化系统项目',
           items: [
+            { text: '智能警情分析平台', link: '/front-end/jq' },
+            { text: '智能情报分析系统', link: '/front-end/qb' },
             { text: '踢球吧管理系统', link: '/front-end/kick' },
             { text: '好麦司机端小程序', link: '/front-end/hmc' },
           ]
@@ -66,8 +69,9 @@ export default defineConfig({
             { text: '作品目录', link: '/work/' },
           ]
         },
-        { text: '技术分享',
-          items:[
+        {
+          text: '技术分享',
+          items: [
             { text: '01. 前端必备技能', link: '/work/hcj' },
             { text: '02. TypeScript', link: '/work/ts' },
             { text: '03. Three.js', link: '/work/threejs' },
@@ -81,9 +85,9 @@ export default defineConfig({
             { text: '11. Node.js', link: '/work/node' },
             { text: '12. 若依入门（Springboot版）', link: '/work/ry' },
             { text: '13. 前端工程化', link: '/work/buildTool' },
-            { text: '14. VitePress', link: '/work/vitepress'  },
+            { text: '14. VitePress', link: '/work/vitepress' },
           ]
-         },
+        },
       ]
     },
     // aside: 'left',
@@ -105,7 +109,7 @@ export default defineConfig({
       message: '基于 MIT 许可发布',
       copyright: '版权所有 © 2023-2025 高云吉'
     },
-    
+
     // editLink: {
     //   pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
     //   text: 'Edit this page on GitHub'
