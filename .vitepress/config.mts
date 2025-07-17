@@ -3,8 +3,15 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   head: [
-    ['link', { rel: 'icon', href: '/GW_Admin/favicon.ico' }]
+    ['meta', { name: 'keywords', content: 'Vue,React,HarmonyOS,前端开发,Ruoyi' }],
+    ['meta', { name: 'author', content: '高云吉' }],
+    ['meta', { property: 'og:title', content: 'GW_Admin - 前端技术专家' }],
+    ['meta', { property: 'og:description', content: '专注前端开发，分享技术经验' }]
   ],
+  // 添加站点地图
+  sitemap: {
+    hostname: 'https://gyj918.github.io/GW_Admin/'
+  },
   base: '/GW_Admin/',
   title: "GW_Admin",
   // titleTemplate: ':title - Custom Suffix',
@@ -24,7 +31,8 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '业务项目', link: '/front-end' },
-      { text: '学习分享', link: '/work' },
+      { text: '知识星球', link: '/work' },
+      { text: '工具导航', link: '/tool' },
       { text: '博客', link: 'https://blog.csdn.net/m0_46833693' },
       {
         text: '联系作者',

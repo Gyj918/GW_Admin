@@ -18,19 +18,15 @@
 - [Code Pal - VSCode 扩展](/projects/AI)
 - [前端脚手架](/projects/Scaffold)
 
-## 最新动态
-
-- **2023-12-01**：发布Code Pal VSCode扩展1.0版本
-- **2023-11-25**：完成HarmonyOS项目第一阶段开发
-- **2023-11-20**：Vue3项目重构完成，性能提升30%
-
 ## 技术栈
 
 ### 前端技术
-- Vue3
+- Vue
 - React
 - Next.js
 - uni-app
+- TypeScript
+- 微信小程序
 
 ### 后端技术
 - Node.js
