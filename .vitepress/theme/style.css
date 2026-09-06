@@ -1,0 +1,956 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+:root {
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  /* AI 青蓝品牌色体系 */
+  --vp-c-brand-1: #06b6d4;
+  --vp-c-brand-2: #0891b2;
+  --vp-c-brand-3: #0e7490;
+  --vp-c-brand-soft: rgba(6, 182, 212, 0.16);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+  --vp-c-danger-1: var(--vp-c-red-1);
+  --vp-c-danger-2: var(--vp-c-red-2);
+  --vp-c-danger-3: var(--vp-c-red-3);
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #06b6d4 30%,
+    #8b5cf6
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #06b6d4 50%,
+    #8b5cf6 50%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+/* ============================================================
+   3D + AI 科技感主题增强
+   ============================================================ */
+
+/* 暗色模式深空背景 + 网格纹理 */
+.dark {
+  --vp-c-bg: #0a0a1a;
+  --vp-c-bg-alt: #0d1117;
+  --vp-c-bg-soft: #111827;
+}
+
+html.dark body {
+  background-color: #0a0a1a;
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* 全局 h2 渐变：AI 青蓝 → 量子紫 */
+h2 {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  background: linear-gradient(120deg, #06b6d4 20%, #8b5cf6 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 2rem 0 1.5rem;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(6, 182, 212, 0.2);
+}
+
+h2::after {
+  content: '';
+  flex: 1;
+  margin-left: 16px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(6, 182, 212, 0.2), transparent);
+}
+
+/* ============================================================
+   全局 3D 背景层（粒子 + 神经网络连线）
+   ============================================================ */
+
+.ai-bg-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+}
+
+/* 粒子光点 */
+.ai-bg-layer::before,
+.ai-bg-layer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(6, 182, 212, 0.6) 1px, transparent 1px),
+    radial-gradient(circle, rgba(139, 92, 246, 0.6) 1px, transparent 1px);
+  background-size: 80px 80px, 120px 120px;
+  background-position: 0 0, 40px 60px;
+  opacity: 0.4;
+}
+
+.ai-bg-layer::before {
+  animation: ai-particle-float 20s linear infinite;
+}
+
+.ai-bg-layer::after {
+  animation: ai-particle-float 30s linear infinite reverse;
+  opacity: 0.25;
+}
+
+@keyframes ai-particle-float {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(20px, -30px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* 神经网络连线（SVG 叠加） */
+.ai-bg-layer .neural-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+
+/* ============================================================
+   Features 卡片 — 3D + AI 科技感
+   玻璃拟态底 + 渐变网格 + 霓虹描边 + 四角几何装饰 + 3D 倾斜
+   ============================================================ */
+
+.VPFeatures {
+  margin-top: 2.5rem !important;
+}
+
+.VPFeatures .VPLink.link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.1rem 1.1rem 1rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  /* 霓虹渐变描边（始终可见，低透明） */
+  background:
+    linear-gradient(var(--vp-c-bg-soft), var(--vp-c-bg-soft)) padding-box,
+    linear-gradient(135deg, rgba(6,182,212,0.6), rgba(139,92,246,0.4), rgba(6,182,212,0.2)) border-box;
+  /* 渐变网格 + 扫描线纹理 */
+  background-image:
+    radial-gradient(circle at 0% 0%, rgba(6,182,212,0.10), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(139,92,246,0.10), transparent 55%),
+    repeating-linear-gradient(0deg, rgba(6,182,212,0.03) 0 1px, transparent 1px 4px),
+    linear-gradient(var(--vp-c-bg-soft), var(--vp-c-bg-soft));
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(6, 182, 212, 0.12);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease, border-color 0.35s ease;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+/* 四角几何装饰线（L 形） */
+.VPFeatures .VPLink.link::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 8px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) top left / 10px 1.5px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) top left / 1.5px 10px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) top right / 10px 1.5px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) top right / 1.5px 10px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) bottom left / 10px 1.5px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) bottom left / 1.5px 10px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) bottom right / 10px 1.5px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) bottom right / 1.5px 10px no-repeat;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+/* 流光扫过 */
+.VPFeatures .VPLink.link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(6, 182, 212, 0.22),
+    transparent
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.VPFeatures .VPLink.link:hover {
+  transform: translateY(-5px) rotateX(4deg) rotateY(-4deg);
+  box-shadow:
+    0 12px 32px rgba(6, 182, 212, 0.25),
+    0 0 28px rgba(139, 92, 246, 0.16),
+    inset 0 1px 0 rgba(6, 182, 212, 0.25);
+}
+
+.VPFeatures .VPLink.link:hover::before {
+  opacity: 0.9;
+}
+
+.VPFeatures .VPLink.link:hover::after {
+  animation: vp-shimmer 0.7s ease;
+}
+
+@keyframes vp-shimmer {
+  to { left: 130%; }
+}
+
+/* 图标徽章：玻璃底 + 霓虹发光 */
+.VPFeatures .icon {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(6,182,212,0.35), rgba(139,92,246,0.18) 70%, transparent),
+    var(--vp-c-brand-soft);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  margin-bottom: 0.6rem;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.VPFeatures .icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.VPFeatures .VPLink.link:hover .icon {
+  transform: scale(1.1) rotate(-4deg);
+  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.4), 0 0 18px rgba(139, 92, 246, 0.25);
+}
+
+.VPFeatures .title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.35rem;
+  color: var(--vp-c-text-1) !important;
+}
+
+.VPFeatures .details {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--vp-c-text-2) !important;
+  margin: 0 0 0.6rem;
+}
+
+.VPFeatures .link-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.25s ease;
+  margin-top: auto;
+}
+
+.VPFeatures .link-text::after {
+  content: '→';
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.VPFeatures .VPLink.link:hover .link-text {
+  gap: 8px;
+}
+
+/* ============================================================
+   AI 技能矩阵区块
+   ============================================================ */
+
+.ai-skill-matrix {
+  margin: 3rem 0;
+}
+
+.ai-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.ai-skill-card {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  /* 霓虹渐变描边 + 渐变网格底 */
+  background:
+    radial-gradient(circle at 0% 0%, rgba(6,182,212,0.12), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(139,92,246,0.12), transparent 55%),
+    repeating-linear-gradient(0deg, rgba(6,182,212,0.03) 0 1px, transparent 1px 4px),
+    linear-gradient(var(--vp-c-bg-soft), var(--vp-c-bg-soft)) padding-box,
+    linear-gradient(135deg, rgba(6,182,212,0.5), rgba(139,92,246,0.35)) border-box;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(6, 182, 212, 0.15);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+/* 顶部光带 */
+.ai-skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--vp-c-brand-1), transparent);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.ai-skill-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background:
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) top left / 12px 1.5px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) top left / 1.5px 12px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) bottom right / 12px 1.5px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) bottom right / 1.5px 12px no-repeat;
+  opacity: 0.3;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.ai-skill-card:hover {
+  transform: translateY(-8px) rotateX(4deg) rotateY(-4deg);
+  box-shadow:
+    0 16px 40px rgba(6, 182, 212, 0.22),
+    0 0 30px rgba(139, 92, 246, 0.18),
+    inset 0 1px 0 rgba(6, 182, 212, 0.3);
+}
+
+.ai-skill-card:hover::before,
+.ai-skill-card:hover::after {
+  opacity: 1;
+}
+
+.ai-skill-card .skill-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.4));
+}
+
+.ai-skill-card h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+  color: var(--vp-c-text-1);
+}
+
+.ai-skill-card .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ai-skill-card .skill-tag {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: var(--vp-c-brand-soft);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  color: var(--vp-c-brand-1);
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.1);
+}
+
+/* ============================================================
+   背景视频展示区 — 全宽背景视频 + 渐变遮罩 + 叠加文字
+   ============================================================ */
+
+.tech-container {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  margin: 3rem 0;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* 视频作为背景铺满 */
+.tech-container .custom-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* 渐变遮罩，保证文字可读 */
+.tech-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 26, 0.85) 0%,
+    rgba(26, 26, 62, 0.6) 50%,
+    rgba(13, 37, 67, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+/* 叠加内容层 */
+.video-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem 3rem;
+  color: #fff;
+}
+
+.video-overlay .eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #67e8f9;
+  margin-bottom: 0.75rem;
+}
+
+.video-overlay h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  background: linear-gradient(120deg, #06b6d4, #a5f3fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border: none;
+  padding: 0;
+  display: block;
+}
+
+.video-overlay h2::after {
+  display: none;
+}
+
+.video-overlay p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .tech-container {
+    height: 320px;
+  }
+  .video-overlay {
+    padding: 1.5rem;
+  }
+  .video-overlay h2 {
+    font-size: 1.4rem;
+  }
+  .video-overlay p {
+    font-size: 0.875rem;
+  }
+}
+
+/* ============================================================
+   时间线样式（发展历程）— 现代左侧竖线布局
+   ============================================================ */
+
+.timeline {
+  position: relative;
+  padding: 12px 0 12px 28px;
+  margin: 1.5rem 0;
+}
+
+/* 左侧竖线（带发光） */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 8px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--vp-c-brand-1),
+    var(--vp-c-brand-3) 60%,
+    transparent
+  );
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 22px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  border-left: 3px solid var(--vp-c-brand-1);
+  /* 渐变网格 + 扫描线 + 玻璃底 */
+  background:
+    radial-gradient(circle at 0% 0%, rgba(6,182,212,0.10), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(139,92,246,0.10), transparent 55%),
+    repeating-linear-gradient(0deg, rgba(6,182,212,0.03) 0 1px, transparent 1px 4px),
+    linear-gradient(var(--vp-c-bg-soft), var(--vp-c-bg-soft)) padding-box,
+    linear-gradient(135deg, rgba(6,182,212,0.4), rgba(139,92,246,0.25)) border-box;
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(6, 182, 212, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* 四角装饰 */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 8px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) top right / 10px 1.5px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) top right / 1.5px 10px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) bottom right / 10px 1.5px no-repeat,
+    linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) bottom right / 1.5px 10px no-repeat;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(6px);
+  box-shadow:
+    0 8px 24px rgba(6, 182, 212, 0.18),
+    0 0 18px rgba(139, 92, 246, 0.12),
+    inset 0 1px 0 rgba(6, 182, 212, 0.25);
+}
+
+.timeline-item:hover::after {
+  opacity: 0.85;
+}
+
+/* 时间线节点圆点 */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  background: var(--vp-c-bg);
+  border: 3px solid var(--vp-c-brand-1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--vp-c-bg), 0 0 10px rgba(6, 182, 212, 0.6);
+}
+
+.timeline-date {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--vp-c-brand-soft);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.15);
+}
+
+.timeline-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--vp-c-text-1);
+}
+
+.timeline-card p {
+  line-height: 1.7;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 22px;
+  }
+  .timeline-item::before {
+    left: -20px;
+  }
+  /* 移动端禁用 3D 透视 */
+  .VPFeatures .VPLink.link:hover,
+  .ai-skill-card:hover,
+  .timeline-item:hover {
+    transform: translateX(4px);
+  }
+}
+
+/* ============================================================
+   图标样式
+   ============================================================ */
+
+.icon-title {
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.icon-timeline {
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%2306b6d4" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 100 16 8 8 0 000-16zm1 1v6h5v2h-5v2h-2v-2H6v-2h5V5h2z"/></svg>');
+}
+
+.icon-team {
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%2306b6d4" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 100 16 8 8 0 000-16zm0 3c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0 7c2.21 0 4 1.79 4 4v1H8v-1c0-2.21 1.79-4 4-4z"/></svg>');
+}
+
+/* ============================================================
+   业务项目页面（/front-end/）— 统一 3D + AI 科技感
+   覆盖内联彩色渐变（紫/粉/蓝/绿）为青蓝+紫色科技玻璃态
+   仅改样式，不动内容结构
+   ============================================================ */
+
+/* 所有内联渐变卡片 → 科技玻璃态底 */
+.vp-doc div[style*="linear-gradient"] {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(6, 182, 212, 0.12), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.12), transparent 55%),
+    repeating-linear-gradient(0deg, rgba(6, 182, 212, 0.03) 0 1px, transparent 1px 4px),
+    linear-gradient(var(--vp-c-bg-soft), var(--vp-c-bg-soft)) !important;
+  border: 1px solid rgba(6, 182, 212, 0.28) !important;
+  color: var(--vp-c-text-1) !important;
+  box-shadow:
+    0 4px 16px rgba(6, 182, 212, 0.10),
+    inset 0 1px 0 rgba(6, 182, 212, 0.12) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.vp-doc div[style*="linear-gradient"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow:
+    0 14px 34px rgba(6, 182, 212, 0.22),
+    0 0 22px rgba(139, 92, 246, 0.14) !important;
+}
+
+/* 顶部 Hero 标题横幅 — 更突出的科技感 */
+.vp-doc > div[style*="linear-gradient"]:first-child {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.25), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.22), transparent 50%),
+    linear-gradient(135deg, rgba(10, 10, 26, 0.92), rgba(26, 26, 62, 0.88)) !important;
+  border: 1px solid rgba(6, 182, 212, 0.4) !important;
+  box-shadow:
+    0 12px 40px rgba(6, 182, 212, 0.25),
+    0 0 30px rgba(139, 92, 246, 0.18) !important;
+}
+
+.vp-doc > div[style*="linear-gradient"]:first-child h1 {
+  background: linear-gradient(120deg, #06b6d4, #a5f3fc, #c4b5fd) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: none !important;
+}
+
+.vp-doc > div[style*="linear-gradient"]:first-child > div {
+  color: rgba(165, 243, 252, 0.9) !important;
+}
+
+/* 卡片内标题 h3/h4 → 科技青蓝 */
+.vp-doc div[style*="linear-gradient"] h3,
+.vp-doc div[style*="linear-gradient"] h4 {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 内联彩色文字 → 统一科技配色 */
+.vp-doc span[style*="color: #"],
+.vp-doc strong[style*="color: #"] {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 金色列表圆点 → 品牌色 */
+.vp-doc span[style*="color: #ffd700"],
+.vp-doc span[style*="color:#ffd700"] {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 技术栈标签（半透明白底胶囊）→ 品牌色胶囊 */
+.vp-doc span[style*="rgba(255,255,255"] {
+  background: var(--vp-c-brand-soft) !important;
+  border: 1px solid rgba(6, 182, 212, 0.4) !important;
+  color: var(--vp-c-brand-1) !important;
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.12) !important;
+}
+
+/* 深色成就卡片内的半透明白底子卡 → 科技玻璃 */
+.vp-doc div[style*="rgba(255, 255, 255, 0.1)"] {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(6, 182, 212, 0.10), transparent 60%),
+    linear-gradient(var(--vp-c-bg-soft), var(--vp-c-bg-soft)) !important;
+  border: 1px solid rgba(6, 182, 212, 0.2) !important;
+}
+
+/* 统计数字大字 → 渐变文字 */
+.vp-doc div[style*="font-size: 32px"] {
+  background: linear-gradient(120deg, #06b6d4, #8b5cf6) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* 项目截图 → 霓虹边框 */
+.vp-doc img[style*="box-shadow"] {
+  border: 1px solid rgba(6, 182, 212, 0.35) !important;
+  box-shadow:
+    0 8px 24px rgba(6, 182, 212, 0.2),
+    0 0 0 1px rgba(6, 182, 212, 0.15) !important;
+  border-radius: 12px !important;
+}
+
+/* 正文段落文字颜色兜底 */
+.vp-doc p[style*="color: #"] {
+  color: var(--vp-c-text-2) !important;
+}
+
+/* 深色卡片内的强调色标题 */
+.vp-doc h3[style*="color: #"] {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 列表项的 padding-left 保持，圆点用品牌色 */
+.vp-doc li[style*="padding-left"] {
+  color: var(--vp-c-text-2) !important;
+}
+
+/* ============================================================
+   业务项目页面 — 布局精细化（间距/排版/栅格层级）
+   仅覆布局属性，不改内容
+   ============================================================ */
+
+/* Hero 横幅：收紧内边距 + 统一圆角 */
+.vp-doc > div[style*="linear-gradient"]:first-child {
+  padding: 28px 24px !important;
+  border-radius: 16px !important;
+  margin-bottom: 28px !important;
+}
+
+/* Hero 标题字号自适应 */
+.vp-doc > div[style*="linear-gradient"]:first-child h1 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem) !important;
+  line-height: 1.3 !important;
+}
+
+/* Hero 副标题 */
+.vp-doc > div[style*="linear-gradient"]:first-child > div {
+  font-size: 0.95rem !important;
+  margin-top: 10px !important;
+}
+
+/* 所有网格容器：统一 gap + 外边距 */
+.vp-doc div[style*="display: grid"] {
+  gap: 16px !important;
+  margin: 24px 0 !important;
+}
+
+/* 所有渐变卡片：统一内边距 + 圆角 */
+.vp-doc div[style*="linear-gradient"] {
+  padding: 18px 18px 16px !important;
+  border-radius: 14px !important;
+}
+
+/* 卡片内「图标+标题」行：收紧间距 */
+.vp-doc div[style*="linear-gradient"] > div[style*="display: flex"] {
+  gap: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+/* 卡片内标题 h3/h4：字号 + 间距 */
+.vp-doc div[style*="linear-gradient"] h3 {
+  font-size: 1.05rem !important;
+  line-height: 1.4 !important;
+  margin: 0 0 8px !important;
+}
+
+.vp-doc div[style*="linear-gradient"] h4 {
+  font-size: 0.98rem !important;
+  line-height: 1.4 !important;
+  margin: 0 0 8px !important;
+}
+
+/* 卡片内段落：行高 + 字号 */
+.vp-doc div[style*="linear-gradient"] p {
+  font-size: 0.875rem !important;
+  line-height: 1.7 !important;
+  margin: 0 0 8px !important;
+}
+
+/* 卡片内列表：紧凑行距 */
+.vp-doc div[style*="linear-gradient"] li {
+  font-size: 0.85rem !important;
+  line-height: 1.65 !important;
+  margin-bottom: 6px !important;
+}
+
+/* 技术栈标签：统一尺寸 */
+.vp-doc div[style*="linear-gradient"] span[style*="border-radius: 20px"],
+.vp-doc div[style*="linear-gradient"] span[style*="border-radius:20px"] {
+  padding: 3px 10px !important;
+  font-size: 0.78rem !important;
+}
+
+/* 统计数字区：居中 + 渐变字 */
+.vp-doc div[style*="font-size: 32px"] {
+  font-size: 1.9rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+/* 统计数字下方说明文字 */
+.vp-doc div[style*="font-size: 14px"] {
+  font-size: 0.8rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* 技术挑战卡片内的「挑战/方案」分组间距 */
+.vp-doc div[style*="linear-gradient"] > div[style*="margin-bottom: 12px"] {
+  margin-bottom: 10px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px dashed rgba(6, 182, 212, 0.2) !important;
+}
+
+/* 项目简介段落：更舒适的阅读宽度 */
+.vp-doc div[style*="linear-gradient"] > p[style*="font-size: 1.1em"] {
+  font-size: 0.95rem !important;
+  line-height: 1.85 !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* 项目截图容器：内边距收紧 */
+.vp-doc div[style*="linear-gradient"] > div[style*="display: flex"] {
+  gap: 16px !important;
+}
+
+/* 响应式：小屏单列更紧凑 */
+@media (max-width: 640px) {
+  .vp-doc div[style*="linear-gradient"] {
+    padding: 14px !important;
+  }
+  .vp-doc > div[style*="linear-gradient"]:first-child {
+    padding: 20px 16px !important;
+  }
+}
