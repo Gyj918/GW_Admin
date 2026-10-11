@@ -151,7 +151,7 @@ features:
     <div class="timeline-date">2024.12</div>
     <div class="timeline-card">
       <h3>鸿蒙应用上线</h3>
-      <p>首个HarmonyOS应用在华为应用市场发布，拓展Ruoyi生态，成功入选Ruoyi生态库</p>
+      <p>首个HarmonyOS应用框架开发完成，拓展Ruoyi生态，成功入选Ruoyi生态库</p>
     </div>
   </div>
   <div class="timeline-item">
